@@ -15,13 +15,13 @@ const isValidNumber = (number, min, max) => {
 const getUserNumber = (min, max) => {
     let userGuess;
     while (!isValidNumber(userGuess, min, max)) {
-        userGuess = parseInt(prompt(`ìnserisci un numero da ${min} a ${max}`)).trim();
+        userGuess = parseInt(prompt(`ìnserisci un numero da ${min} a ${max}`).trim());
     }
 };
 
 // 1) Random Unique Numbers generator
 const getRandomUniqueNumbers = (min, max, tot) => {
-    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
     const numbers = [];
     while (numbers.lenght < tot) {
